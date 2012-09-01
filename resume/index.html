@@ -101,6 +101,44 @@
             position: fixed;
             top: 20px;
          }
+         
+         @media print {
+            body {
+               background: #ffffff;
+            }
+            
+            header {
+               width: 500px;
+               background-size: 100%;
+               background-repeat: no-repeat;
+               height: 116px;
+            }
+            
+            #wrapper {
+               width: 100%;
+            }
+            
+            #header {
+               margin-top: 0;
+               margin-bottom; 0;
+            }
+            
+            .span3 {
+               display: none !important;
+            }
+            
+            #content {
+               width: 100%;
+               margin: 0;
+               padding 0;
+            }
+            
+            .well {
+               background: #ffffff;
+               border: 0px;
+               box-shadow: none;
+            }
+         }
       </style>
       <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
       <script>
@@ -141,6 +179,9 @@
                         <li><a href="#mem">Memberships</a></li>
                         <li><a href="#ach">Achievements</a></li>
                         <li><a href="#int">Interests</a></li>
+                        <li>&nbsp;</li>
+                        <li><a href="javascript:window.print();">Print</a></li>
+                        <li><a href="Resume.pdf">Offline</a></li>
                      </ul>
                   </div>
                   
@@ -430,7 +471,7 @@
                            Operating Systems: Windows (95 / 98 / XP / Vista / 7 / 8 / 8 RT) / *nix (Solaris 10 / Ubuntu / Debian / Fedora / Xandros / PCLinux / DSL / QNX) / Mobile (Android).
                         </li>
                      </ul>
-                  </div>s
+                  </div>
                   
                   <div id="edu" class="well">
                      <h2>EDUCATION & CERTIFICATIONS</h2>
