@@ -1,0 +1,628 @@
+<html>
+   <head>
+      <link rel="stylesheet" href="../css/bootstrap.min.css">
+      <link rel="stylesheet" href="../css/bootstrap-responsive.min.css">
+      <style>
+         body {
+            background-image: url('../img/bg.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+         }
+         
+         header {
+            background-image: url('../img/header.png');
+            width: 860px;
+            height: 200px;
+            margin-bottom: 20px;
+            margin-top: 20px;
+            margin: 0px auto;
+         }
+         
+         h2 {
+            border-top: 2px solid #333333;
+            border-bottom: 1px solid #333333;
+            margin-bottom: 10px;
+            background-image: url('../img/bullet-large.png');
+            background-repeat: no-repeat;
+            background-position: 0 8px;
+            padding-left: 30px;
+         }
+         
+         a {
+            color: #020075;
+         }
+         
+         #content ul{
+            list-style:none;
+            margin-bottom: 0;
+            padding: 0;
+         }
+         
+         #content ul li{
+            margin: .25em 0;
+            padding-left: 25px;
+            background-image: url('../img/bullet-medium.png');
+            background-repeat: no-repeat;
+            background-position: 0px 0px; 
+         }
+         
+         #content li ul{
+             margin-bottom:0;
+         }
+         
+         #content ul li.nobullet {
+            background: none;
+         }
+         
+         #wrapper {
+            width: 1000px;
+            margin: 0 auto;
+         }
+         
+         #header {
+            margin-top: 20px;
+            margin-bottom: 20px;
+         }
+         
+         .spacer {
+            width: 60%;
+            height: 0px;
+            border: 1px solid #333333;
+            margin: 0 auto;
+            margin-bottom: 10px;
+         }
+         
+         .institution, .company {
+            font-weight: bold;
+            display: inline-block;
+            font-size: 15px;
+         }
+         
+         .dates {
+            font-weight: bold;
+            font-size: 15px;
+            float:right;
+         }
+         
+         .certification, .position {
+            font-weight: bold;
+         }
+         
+         .location {
+            font-style: italic;
+            padding-bottom: 10px;
+         }
+         
+         .certifications .certification, .volunteering .position {
+            display:inline-block;
+         }
+         
+         .sticky {
+            position: fixed;
+            top: 20px;
+         }
+      </style>
+      <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+      <script>
+         $(document).ready(function() {
+            var navTop = $('#nav').offset().top;
+
+            $(window).scroll(function() {
+               var windowTop = $(window).scrollTop();
+               var toggle = windowTop > (navTop - 20);
+               var width = $('#nav').width();
+               
+               $('#nav').toggleClass('sticky', toggle);
+               
+               if(toggle) {
+                  $('#nav').width(width);
+               }
+            });
+         });
+      </script>
+   </head>
+   <body>
+      <div id="wrapper">
+         
+         <div id="header">
+            <header></header>
+         </div>
+         
+         <div class="container-fluid">
+            <div class="row-fluid">
+               <div class="span3">
+                  
+                  <div id="nav" class="well">
+                     <ul class="nav nav-list">
+                        <li><a href="#con">Contact Details</a></li>
+                        <li><a href="#sum">Summary</a></li>
+                        <li><a href="#obj">Objective</a></li>
+                        <li><a href="#edu">Education & Certifications</a></li>
+                        <li><a href="#emp">Employment</a></li>
+                        <li><a href="#ach">Achievements</a></li>
+                        <li><a href="#ski">Skills</a></li>
+                        <li><a href="#int">Interests</a></li>
+                     </ul>
+                  </div>
+                  
+               </div>
+               <div id="content" class="span9">
+                  
+                  <div id="sum" class="well">
+                     <h2>SUMMARY</h2>
+                     <ul>
+                        <li>
+                           Professional software engineer with over 7 years experience.
+                        </li>
+                        <li>
+                           Completed Computer Science / Computer and Network Engineering Double Degree with Honours at RMIT University.
+                        </li>
+                        <li>
+                           Over 10 years customer service based retail experience.
+                        </li>
+                        <li>
+                           Completed VCE with exceptional grades.
+                        </li>
+                     </ul>
+                  </div>
+                  
+                  <div id="obj" class="well">
+                     <h2>OBJECTIVE</h2>
+                     <div>
+                        My objective is to obtain a position in either software development or embedded system design where I can apply my extensive education and the skills I have acquired to ensure that I will excel in either of these domains.
+                     </div>
+                  </div>
+                  
+                  <div id="edu" class="well">
+                     <h2>EDUCATION & CERTIFICATIONS</h2>
+                     <div>
+                        <div class="education">
+                           <div class="institution">
+                              RMIT University
+                           </div>
+                           <div class="dates">
+                              Feb 2006 – Dec 2010
+                           </div>
+                           <div class="certification">
+                              Bachelor of Computer Science / Bachelor of Engineering (Computer and Network Engineering)
+                           </div>
+                           <div class="description">
+                              <ul>
+                                 <li>
+                                    Awarded:
+                                 </li>
+                                 <li class="nobullet">
+                                    <ul>
+                                       <li>
+                                          Bachelor of Computer Science with Distinction.
+                                       </li>
+                                       <li>
+                                          Bachelor of Engineering (Computer and Networking Engineering) with Honours 1st class.
+                                       </li>
+                                    </ul>
+                                 </li>
+                                 <li>
+                                    Achieved GPA of 3.82 (High Distinction average).
+                                 </li>
+                                 <li>
+                                    Design projects:
+                                 </li>
+                                 <li class="nobullet">
+                                    <ul>
+                                       <li>
+                                          Motion Interpretation Mouse Engine (MIME).
+                                       </li>
+                                       <li>
+                                          Context Awareness System (CAS).
+                                       </li>
+                                       <li>
+                                          Trakr.
+                                       </li>
+                                    </ul>
+                                 </li>
+                                 <li>
+                                    Member of The Institution Of Engineers Australia.
+                                 </li>
+                                 <li>
+                                    Member of Golden Key International Honour Society (RMIT Chapter).
+                                 </li>
+                              </ul>
+                           </div>
+                           <div class="location">
+                              Melbourne City Campus
+                           </div>
+                        </div>
+                        
+                        <div class="spacer"></div>
+                        
+                        <div class="education">
+                           <div class="institution">
+                              Reservoir District Secondary College
+                           </div>
+                           <div class="dates">
+                              Jan 2000 – Nov 2005
+                           </div>
+                           <div class="certification">
+                              Victorian Certificate of Education
+                           </div>
+                           <div class="description">
+                              <ul>
+                                 <li>
+                                    Completed VCE with exceptional grades (93.40 ENTER).
+                                 </li>
+                                 <li>
+                                    Undertook a focused education concentrating on mathematics/science streams.
+                                 </li>
+                                 <li>
+                                    Selected as the Valedictorian Speaker of Class 2005.
+                                 </li>
+                                 <li>
+                                    Participated in the Peer Support program; duties included new student orientation.
+                                 </li>
+                                 <li>
+                                    Participated in Peer Mediation program; duties included student conflict resolution.
+                                 </li>
+                              </ul>
+                           </div>
+                           <div class="location">
+                              Reservoir
+                           </div>
+                        </div>
+                        
+                        <div class="spacer"></div>
+                        
+                        <div class="certifications">
+                           <div class="institution">
+                              Certifications
+                           </div>
+                           <ul>
+                              <li>
+                                 <div class="certification">
+                                    Certified Splunk Deployment Architect
+                                 </div>
+                                 <div class="dates">
+                                    Nov 2011
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class="certification">
+                                    Certified Splunk Developer
+                                 </div>
+                                 <div class="dates">
+                                    May 2011
+                                 </div>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+                  
+                  <div id="emp" class="well">
+                     <h2>EMPLOYMENT</h2>
+                     <div>
+                        <div class="employment">
+                           <div class="company">
+                              Unico
+                           </div>
+                           <div class="dates">
+                              Feb 2012 – Present
+                           </div>
+                           <div class="position">
+                              Design Engineer
+                           </div>
+                           <div class="description">
+                              <ul>
+                                 <li>
+                                    Enterprise Java development involving EJB, Spring, Web Services, application servers and various other Java-centric technologies.
+                                 </li>
+                                 <li>
+                                    Web application development involving JSF, jQuery, Sencha and various other web-centric technologies.
+                                 </li>
+                                 <li>
+                                    Splunk dashboard development requiring a detailed understanding of the clients business requirements.
+                                 </li>
+                              </ul>
+                           </div>
+                           <div class="location">
+                              Melbourne
+                           </div>
+                        </div>
+                        
+                        <div class="spacer"></div>
+                        
+                        <div class="employment">
+                           <div class="company">
+                              HACD Design
+                           </div>
+                           <div class="dates">
+                              Nov 2005 – Present
+                           </div>
+                           <div class="position">
+                              Director
+                           </div>
+                           <div class="description">
+                              <ul>
+                                 <li>
+                                    Own business.
+                                 </li>
+                                 <li>
+                                    Focuses include: web application development, mobile application development, embedded software development, game development, general software development, research and development and computer assembly.
+                                 </li>
+                                 <li>
+                                    Developed websites include: 
+                                 </li>
+                                 <li class="nobullet">
+                                    <ul>
+                                       <li>
+                                          Realimage Photography – http://www.realimage.com.au
+                                       </li>
+                                       <li>
+                                          House Sense – http://www.housesense.com.au
+                                       </li>
+                                    </ul>
+                                 </li>
+                              </ul>
+                           </div>
+                           <div class="location">
+                              West Preston
+                           </div>
+                        </div>
+                     </div>
+                     
+                     <div class="spacer"></div>
+                     
+                     <div class="employment">
+                        <div class="company">
+                           Bunnings Warehouse
+                        </div>
+                        <div class="dates">
+                           Sept 2002 – Present
+                        </div>
+                        <div class="position">
+                           Sales Assistant
+                        </div>
+                        <div class="description">
+                           <ul>
+                              <li>
+                                 Sales Assistant
+                              </li>
+                              <li>
+                                 Duties include customer service.
+                              </li>
+                              <li>
+                                 Received 5 customer service excellence awards (first of which was within 3rd week of employment).
+                              </li>
+                              <li>
+                                 Actively participated in the training of several team members.
+                              </li>
+                              <li>
+                                 Acquired a detailed product knowledge (spanning several departments).
+                              </li>
+                           </ul>
+                        </div>
+                        <div class="location">
+                           Northland
+                        </div>
+                     </div>
+                     
+                     <div class="spacer"></div>
+                     
+                     <div class="employment">
+                        <div class="company">
+                           Unico
+                        </div>
+                        <div class="dates">
+                           Feb 2011 – Feb 2012
+                        </div>
+                        <div class="position">
+                           Graduate
+                        </div>
+                        <div class="description">
+                           <ul>
+                              <li>
+                                 Participated in Unico's 2011 Graduate program.
+                              </li>
+                              <li>
+                                 Rotations included: Enterprise Java development, Splunk dashboard development, Samsung Internet@TV widget development, International Roaming testing and documentation writing.
+                              </li>
+                           </ul>
+                        </div>
+                        <div class="location">
+                           Melbourne
+                        </div>
+                     </div>
+                     
+                     <div class="spacer"></div>
+                     
+                     <div class="employment">
+                        <div class="company">
+                           RMIT University
+                        </div>
+                        <div class="dates">
+                           Feb 2007 – Nov 2010
+                        </div>
+                        <div class="position">
+                           Sessional Tutor
+                        </div>
+                        <div class="description">
+                           <ul>
+                              <li>
+                                 Casual employment for the School of Computer Science and Information Technology and the School of Electrical and Computer Engineering.
+                              </li>
+                              <li>
+                                 Duties included laboratory tutoring, assignment and exam marking for the first year Java Programming course, and help sessions and tutoring for the first year Embedded Systems Design course.
+                              </li>
+                           </ul>
+                        </div>
+                        <div class="location">
+                           Melbourne City Campus
+                        </div>
+                     </div>
+                     
+                     <div class="spacer"></div>
+                     
+                     <div class="employment">
+                        <div class="company">
+                           Computer Manufacturing & Integration
+                        </div>
+                        <div class="dates">
+                           June 2003
+                        </div>
+                        <div class="position">
+                           Various Duties
+                        </div>
+                        <div class="description">
+                           <ul>
+                              <li>
+                                 Employed as part of a 2 week work experience scheme for Year 10 students.
+                              </li>
+                              <li>
+                                 Duties included assembly of desktop personal computers, software installations and diagnostic work.
+                              </li>
+                           </ul>
+                        </div>
+                        <div class="location">
+                           Bundoora
+                        </div>
+                     </div>
+                     
+                     <div class="spacer"></div>
+                     
+                     <div class="volunteering">
+                        <div class="company">
+                           Volunteer Employment
+                        </div>
+                        <ul>
+                           <li>
+                              <div class="position">
+                                 RMIT Open Day
+                              </div>
+                              <div class="dates">
+                                 Aug 2009
+                              </div>
+                           </li>
+                           <li>
+                              <div class="position">
+                                 RMIT LEAD Program (Mentors Assisting Programming Students)
+                              </div>
+                              <div class="dates">
+                                 Mar 2007 – June 2007
+                              </div>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+                  
+                  <div id="ach" class="well">
+                     <h2>ACHEIVEMENTS</h2>
+                     <ul>
+                        <li>
+                           EnGenius Trade Fair 2010 Platinum Prize (Final Year).
+                        </li>
+                        <li>
+                           The School of Electrical & Computer Engineering First Year Double Degree Prize. (First Year).
+                        </li>
+                        <li>
+                           Learning Area Award for Science (Year 12).
+                        </li>
+                        <li>
+                           Certificate of Excellence in Chemistry, English, Mathematical Methods, Psychology Information Systems and Literature (Year 12).
+                        </li>
+                        <li>
+                           Meritorious Academic Achievement Award (Year 12 and Year 11).
+                        </li>
+                        <li>
+                           Distinction in the Australian Mathematics Competition (Year 11).
+                        </li>
+                        <li>
+                           Outstanding Customer Service Award (Mar 2008 / Feb 2008 / Jul 2007 / Mar 2007 / Oct 2002).
+                        </li>
+                     </ul>
+                  </div>
+                  
+                  <div id="ski" class="well">
+                     <h2>SKILLS</h2>
+                     <ul>
+                        <li>
+                           Architecture: UML / SDLC.
+                        </li>
+                        <li>
+                           Methodologies: Waterfall / Agile.
+                        </li>
+                        <li>
+                           Programming: Assembly / C / C++ / Java / .NET / OpenGL.
+                        </li>
+                        <li>
+                           Scripting: PHP / PEAR / Python / Splunk / BASH / CSH / MATLAB.
+                        </li>
+                        <li>
+                           Database: SQL / MySql / OracleDB.
+                        </li>
+                        <li>
+                           Web: HTML5 / CSS / JavaScript / AJAX / jQuery / Sencha / JSON / AJAX / JSP / JSF / JMS / SOAP / REST / Web Services / WSDL / Apache 2 / Lighttpd / Tomcat / Axis 2 / Glassfish / Weblogic.
+                        </li>
+                        <li>
+                           Mobile: Android.
+                        </li>
+                        <li>
+                           Frameworks: Spring / JSF / Zend.
+                        </li>
+                        <li>
+                           Versioning: CVS / SVN / Perforce / Git.
+                        </li>
+                        <li>
+                           IDE: Eclipse / Visual Studio / Arduino / VIM / Cosmic C / AVR Studio / Deamweaver.
+                        </li>
+                        <li>
+                           Circuit Design: Protel / PSPICE / Xilinx / Quartus.
+                        </li>
+                        <li>
+                           Applications: GIMP / Photoshop / MATLAB / VMware / VirtualBox.
+                        </li>
+                        <li>
+                           Operating Systems: Windows (95 / 98 / XP / Vista / 7 / 8 / 8 RT) / *nix (Solaris 10 / Ubuntu / Debian / Fedora / Xandros / PCLinux / DSL / QNX).
+                        </li>
+                     </ul>
+                  </div>
+                  
+                  <div id="int" class="well">
+                     <h2>INTERESTS</h2>
+                     <ul>
+                        <li>
+                           Software development and web design.
+                        </li>
+                        <li>
+                           Embedded system design.
+                        </li>
+                        <li>
+                           Reading and creative writing.
+                        </li>
+                        <li>
+                           Game development and gaming.
+                        </li>
+                        <li>
+                           Music and music events.
+                        </li>
+                        <li>
+                           Photography and travelling.
+                        </li>
+                     </ul>
+                  </div>
+                  
+                  <div class="well">
+                     <h2>NOTES</h2>
+                     <pre>
+                     experience first
+                     employment -> experience
+
+                     print (stylesheet) version
+                     skills - move up
+                     </pre>
+                  </div>
+               </div>
+            </div>
+         </div>
+         
+      </div>
+   </body>
+</html>
